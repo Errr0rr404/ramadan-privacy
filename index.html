@@ -31,7 +31,7 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="date">Effective date: February 14, 2026</p>
+  <p class="date">Effective date: February 18, 2026</p>
 
   <p>
     Ramadan 2026 ("the App") is developed and maintained by World of Z.
@@ -51,7 +51,8 @@
   <ul>
     <li>Sent to the <a href="https://aladhan.com/prayer-times-api" target="_blank" rel="noopener">Aladhan prayer-times API</a> as latitude/longitude coordinates to retrieve prayer times.</li>
     <li>Processed on-device for Qibla direction calculation.</li>
-    <li><strong>Never stored, logged, or shared</strong> by the App beyond the API request above.</li>
+    <li>Used to determine your country (via on-device reverse geocoding) so the App can show region-specific features such as Live Mosque. The detected country code is stored locally on your device and is <strong>never transmitted externally</strong>.</li>
+    <li><strong>Never stored on external servers, logged, or shared</strong> by the App beyond the API request above.</li>
   </ul>
 
   <h2>3. Notifications</h2>
@@ -85,42 +86,62 @@
     include in your email. We do not share your contact information with third parties.
   </p>
 
-  <h2>7. Third-Party Services</h2>
+  <h2>7. Live Mosque Feature</h2>
+  <p>
+    The App includes an optional "Live Mosque" feature (currently available to users in
+    the United States) that lets you find and view live prayer-time information from
+    nearby mosques. When you use this feature:
+  </p>
+  <ul>
+    <li>You provide a <strong>zip code</strong> which is sent to a publicly accessible
+      <a href="https://firebase.google.com/products/firestore" target="_blank" rel="noopener">Google Cloud Firestore</a>
+      database operated by <a href="https://www.livemosque.live" target="_blank" rel="noopener">Live Mosque</a>
+      to retrieve a list of mosques in your area. No other personal information is sent.</li>
+    <li>Once you select a mosque, its prayer-time page from livemosque.live is displayed
+      within the App using an embedded web view. Your interaction with this web content
+      is subject to Live Mosque's own terms and privacy practices.</li>
+    <li>Your selected mosque name and zip code are stored <strong>locally on your device</strong>
+      so the App can remember your choice. This information is never sent to our servers.</li>
+  </ul>
+
+  <h2>8. Third-Party Services</h2>
   <ul>
     <li><strong>Aladhan API</strong> — receives latitude/longitude to return prayer times. See their <a href="https://aladhan.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</li>
     <li><strong>Cloudinary</strong> — serves dua recitation audio files. No personal data is transmitted; only the audio file URL is requested. See their <a href="https://cloudinary.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</li>
+    <li><strong>Live Mosque / Google Firestore</strong> — receives the zip code you enter to return matching mosques. The embedded web view loads content directly from livemosque.live. See <a href="https://www.livemosque.live" target="_blank" rel="noopener">Live Mosque</a> and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a>.</li>
     <li><strong>Charity links</strong> — the App links to external charity websites (Islamic Relief, LaunchGood). Visiting those sites is subject to their own privacy policies.</li>
   </ul>
 
-  <h2>8. Children's Privacy</h2>
+  <h2>9. Children's Privacy</h2>
   <p>
     The App does not knowingly collect information from children under 13 (or the
     applicable age of consent in your jurisdiction). The App is suitable for all ages
     and contains no age-restricted content.
   </p>
 
-  <h2>9. Sharing Feature</h2>
+  <h2>10. Sharing Feature</h2>
   <p>
     The App allows you to share a dua as an image card via the native share sheet.
     A temporary image is generated on-device and shared using your operating system's
     built-in sharing mechanism. No data is uploaded to our servers.
   </p>
 
-  <h2>10. Data Security</h2>
+  <h2>11. Data Security</h2>
   <p>
     Because we do not collect or store personal data, there is no user data at risk.
     All user preferences — including language, notification settings, favorite duas,
-    tasbeeh counts, and cached prayer times — are stored locally on your device
-    using standard platform storage and are never transmitted externally.
+    tasbeeh counts, cached prayer times, selected mosque, and detected country code
+    — are stored locally on your device using standard platform storage and are never
+    transmitted externally.
   </p>
 
-  <h2>11. Changes to This Policy</h2>
+  <h2>12. Changes to This Policy</h2>
   <p>
     We may update this privacy policy from time to time. Any changes will be
     reflected on this page with an updated effective date.
   </p>
 
-  <h2>12. Contact Us</h2>
+  <h2>13. Contact Us</h2>
   <p>
     If you have questions about this privacy policy, please contact us at:<br />
     <a href="mailto:zan@worldofz.com">zan@worldofz.com</a>
